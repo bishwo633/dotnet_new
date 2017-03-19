@@ -1,0 +1,10 @@
+﻿@model WebApplicationMVC.Models.Student
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+@Html.Partial("_StudentViewer")
+
+@Html.ActionLink("Go to list","Index","Students")

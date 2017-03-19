@@ -1,0 +1,32 @@
+﻿
+@model WebApplicationMVC.Models.Student
+    
+<p>
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)
+    @Html.ValidationMessageFor(model => model.Name)
+</p>
+
+<p>
+    @Html.LabelFor(model => model.Address)
+    @Html.TextBoxFor(model => model.Address)
+    @Html.ValidationMessageFor(model => model.Address)
+</p>
+
+<p>
+    @Html.LabelFor(model => model.DateOfBirth)
+    @Html.TextBoxFor(model => model.DateOfBirth)
+    @Html.ValidationMessageFor(model => model.DateOfBirth)
+</p>
+
+<p>
+    @Html.LabelFor(model => model.Gender)
+    @Html.EnumDropDownListFor(model => model.Gender)
+    @Html.ValidationMessageFor(model => model.Gender)
+</p>
+
+<p>
+    @Html.LabelFor(model => model.Rank)
+    @Html.TextBoxFor(model => model.Rank)
+    @Html.ValidationMessageFor(model => model.Rank)
+</p>

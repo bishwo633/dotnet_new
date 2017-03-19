@@ -1,0 +1,37 @@
+﻿@model IEnumerable<WebApplicationMVC.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>DateOfBirth</th>
+            <th>Gender</th>
+            <th>Rank</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@Html.Display(student.Name)</td>
+                <td>@Html.Display(student.Address)</td>
+                <td>@Html.Display(student.DateOfBirth.ToString())</td>
+                <td>@Html.Display(student.Gender.ToString())</td>
+                <td>@Html.Display(student.Rank.ToString())</td>
+                <td>@Html.ActionLink("Update","Update","Students", new {@id = student.Id, @class = "col-md-2"})
+                    <a href="/Students/Details/@student.Id" class="col-md-2">View Details</a>
+                    <a href="/Students/Delete?id=@student.Id" class="col-md-2">Delete</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
